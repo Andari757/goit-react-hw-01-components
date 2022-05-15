@@ -1,0 +1,82 @@
+.Profile {
+    font-size: 24px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #FFF;
+    border: 1px solid #CCC;
+    overflow: hidden;
+}
+
+.Profile,
+.Profile__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Profile__avatar {
+    display: block;
+    border-radius: 9000px;
+    background: red;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 1.5em 0;
+    width: 25%;
+}
+
+.Profile__username,
+.Profile__tag,
+.Profile__location {
+    margin: 0.25em;
+}
+
+.Profile__username {
+    font-weight: 500;
+}
+
+.Profile__tag,
+.Profile__location {
+    font-weight: 300;
+    margin: 0.25em;
+    opacity: 0.5;
+}
+
+.Profile__stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #EEE;
+    margin: 32px 0 0 0;
+    padding: 32px;
+    width: 100%;
+}
+
+.Profile__stats-item {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 8px 32px;
+}
+
+.Profile__stats-item:first-child {
+    padding-left: 0;
+}
+
+.Profile__stats-item:last-child {
+    padding-right: 0;
+}
+
+.Profile__stats-item:not(:last-child) {
+    border-right: 1px solid #CCC;
+}
+
+.Profile__stats-label,
+.Profile__stats-value {
+    display: block;
+}
+
+.Profile__stats-label {
+    font-weight: 300;
+}
