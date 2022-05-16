@@ -2,6 +2,10 @@ import { Profile } from './components/profile/Profile';
 import ProfileData from './user.json';
 import { Statistics } from 'components/statistics/Statistics';
 import Stats from "./statistics.json";
+import { Friends } from 'components/friendList/FriendList';
+import friends from "./friends.json"
+import transactions from "./transactions.json"
+import { Transactions } from 'components/transactionHistory/TransactionHistory';
 export const App = () => {
   return (
     <div
@@ -21,6 +25,12 @@ export const App = () => {
       <Statistics
         title="シ"
         stats={Stats}
+      />
+      <Friends
+        friends={friends}
+      />
+      <Transactions
+        items={transactions}
       />
     </div>
 

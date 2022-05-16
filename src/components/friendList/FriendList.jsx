@@ -1,21 +1,21 @@
 import "./style.css";
 import PropTypes from 'prop-types';
-export function Statistics({ title, stats }) {
+export function Friends({ friends }) {
     return (
-        <section className="statistics">
-            {title && (<h2 className="statistics__title">{title}</h2>)}
-            <ul className="statistics__list">
-                {stats.map(stat => (
-                    <li key={stat.id} className="statistics__item">
-                        <span className="statistics__label">{stat.label}</span>
-                        <span className="statistics__percentage">{stat.percentage}%</span>
-                    </li>
-                ))}
-            </ul>
-        </section>
+
+        <ul className="friend-list">
+            {friends.map(friend => (
+                <li key={friend.id} className="friend-list__item">
+                    <span className={friend.isOnline ? "friend-list__status" : "friend-list__status friend-list__status--offline"}  ></span>
+                    <img className="friend-list__avatar" src={friend.avatar} alt="User avatar" width="48" />
+                    <p className="friend-list__name">{friend.name}</p>
+                </li>
+            ))
+            }
+        </ul >
+
     );
 }
-Statistics.prototype = {
-    title: PropTypes.string,
-    stats: PropTypes.arrayOf(PropTypes.object)
+Friends.prototype = {
+    friends: PropTypes.arrayOf(PropTypes.object)
 }
