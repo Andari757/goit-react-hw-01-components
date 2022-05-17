@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 import PropTypes from 'prop-types';
-export function TransactionHistory({ items }) {
+export default function TransactionHistory({ items }) {
     const elements = items.map(item => (
         <tr className={styles['transaction-history__row']} key={item.id}>
             <td className={styles['transaction-history__row-element']}>{item.type}</td>
@@ -28,9 +28,9 @@ TransactionHistory.defaultProps = {
 }
 TransactionHistory.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string,
-        type: PropTypes.string,
-        amount: PropTypes.string,
-        currency: PropTypes.string
+        id: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        amount: PropTypes.string.isRequired,
+        currency: PropTypes.string.isRequired
     }))
 }

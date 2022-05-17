@@ -1,4 +1,4 @@
-.Profile {
+.profile {
     font-size: 24px;
     border-radius: 8px;
     box-sizing: border-box;
@@ -7,14 +7,14 @@
     overflow: hidden;
 }
 
-.Profile,
-.Profile__details {
+.profile,
+.profile__details {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.Profile__avatar {
+.profile__avatar {
     display: block;
     border-radius: 9000px;
     background: red;
@@ -24,24 +24,24 @@
     width: 25%;
 }
 
-.Profile__username,
-.Profile__tag,
-.Profile__location {
+.profile__username,
+.profile__tag,
+.profile__location {
     margin: 0.25em;
 }
 
-.Profile__username {
+.profile__username {
     font-weight: 500;
 }
 
-.Profile__tag,
-.Profile__location {
+.profile__tag,
+.profile__location {
     font-weight: 300;
     margin: 0.25em;
     opacity: 0.5;
 }
 
-.Profile__stats {
+.profile__stats {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -51,7 +51,7 @@
     width: 100%;
 }
 
-.Profile__stats-item {
+.profile__stats-item {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -60,23 +60,23 @@
     padding: 8px 32px;
 }
 
-.Profile__stats-item:first-child {
+.profile__stats-item:first-child {
     padding-left: 0;
 }
 
-.Profile__stats-item:last-child {
+.profile__stats-item:last-child {
     padding-right: 0;
 }
 
-.Profile__stats-item:not(:last-child) {
+.profile__stats-item:not(:last-child) {
     border-right: 1px solid #CCC;
 }
 
-.Profile__stats-label,
-.Profile__stats-value {
+.profile__stats-label,
+.profile__stats-value {
     display: block;
 }
 
-.Profile__stats-label {
+.profile__stats-label {
     font-weight: 300;
 }

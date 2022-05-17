@@ -1,11 +1,11 @@
-import { Profile } from './components/profile/Profile';
-import ProfileData from './data/user.json';
-import { Statistics } from 'components/statistics/Statistics';
-import Stats from "./data/statistics.json";
-import { FriendList } from 'components/friendList/FriendList';
+import Profile from './components/Profile/Profile';
+import profileData from './data/user.json';
+import Statistics from 'components/Statistics/Statistics';
+import stats from "./data/statistics.json";
+import FriendList from 'components/FriendList/FriendList';
 import friends from "./data/friends.json"
 import transactions from "./data/transactions.json"
-import { TransactionHistory } from 'components/transactionHistory/TransactionHistory';
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
 export const App = () => {
   return (
     <div
@@ -20,11 +20,11 @@ export const App = () => {
       }}
     >
       <Profile
-        {...ProfileData}
+        {...profileData}
       />
       <Statistics
         title="シ"
-        stats={Stats}
+        stats={stats}
       />
       <FriendList
         friends={friends}

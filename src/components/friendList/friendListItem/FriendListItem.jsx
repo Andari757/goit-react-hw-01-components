@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 import PropTypes from 'prop-types';
-export function FriendListItem({ friend }) {
+export default function FriendListItem({ friend }) {
     return (
 
         < li className={styles['friend-list__item']} >

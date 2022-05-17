@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 import PropTypes from 'prop-types';
-export function Statistics({ title, stats }) {
+export default function Statistics({ title, stats }) {
     const elements = stats.map(stat => (
         <li key={stat.id} className={styles.statistics__item}>
             <span className={styles.statistics__label}>{stat.label}</span>
@@ -22,8 +22,8 @@ Statistics.defaultProps = {
 Statistics.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string,
-        label: PropTypes.string,
-        percentage: PropTypes.number
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired
     }))
 }
