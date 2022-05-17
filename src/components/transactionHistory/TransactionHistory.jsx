@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 import PropTypes from 'prop-types';
-export function Transactions({ items }) {
+export function TransactionHistory({ items }) {
     return (
 
         <table className={styles['transaction-history']}>
@@ -25,10 +25,10 @@ export function Transactions({ items }) {
 
     );
 }
-Transactions.defaultProps = {
+TransactionHistory.defaultProps = {
     items: []
 }
-Transactions.prototype = {
+TransactionHistory.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string,
         type: PropTypes.string,

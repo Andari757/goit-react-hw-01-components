@@ -2,10 +2,10 @@ import { Profile } from './components/profile/Profile';
 import ProfileData from './data/user.json';
 import { Statistics } from 'components/statistics/Statistics';
 import Stats from "./data/statistics.json";
-import { Friends } from 'components/friendList/FriendList';
+import { FriendList } from 'components/friendList/FriendList';
 import friends from "./data/friends.json"
 import transactions from "./data/transactions.json"
-import { Transactions } from 'components/transactionHistory/TransactionHistory';
+import { TransactionHistory } from 'components/transactionHistory/TransactionHistory';
 export const App = () => {
   return (
     <div
@@ -26,10 +26,10 @@ export const App = () => {
         title="シ"
         stats={Stats}
       />
-      <Friends
+      <FriendList
         friends={friends}
       />
-      <Transactions
+      <TransactionHistory
         items={transactions}
       />
     </div>

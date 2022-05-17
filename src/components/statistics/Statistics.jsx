@@ -18,7 +18,7 @@ export function Statistics({ title, stats }) {
 Statistics.defaultProps = {
     stats: []
 }
-Statistics.prototype = {
+Statistics.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string,
