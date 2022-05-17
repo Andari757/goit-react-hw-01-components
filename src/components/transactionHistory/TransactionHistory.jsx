@@ -28,3 +28,6 @@ export function Transactions({ items }) {
 Transactions.prototype = {
     items: PropTypes.arrayOf(PropTypes.object)
 }
+Transactions.defaultProps = {
+    items: []
+}

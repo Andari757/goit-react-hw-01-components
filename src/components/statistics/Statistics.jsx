@@ -19,3 +19,6 @@ Statistics.prototype = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(PropTypes.object)
 }
+Statistics.defaultProps = {
+    stats: []
+}

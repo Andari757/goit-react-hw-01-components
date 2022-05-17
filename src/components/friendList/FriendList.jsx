@@ -19,3 +19,6 @@ export function Friends({ friends }) {
 Friends.prototype = {
     friends: PropTypes.arrayOf(PropTypes.object)
 }
+Friends.defaultProps = {
+    friends: []
+}
