@@ -1,31 +1,32 @@
-import "./style.css";
+// import "./style.css";
+import styles from "./style.module.css"
 import PropTypes from 'prop-types';
 export function Profile({ username, tag, location, avatar, stats }) {
     return (
-        <div className="Profile">
-            <div className="Profile__details">
+        <div className={styles.Profile}>
+            <div className={styles.Profile__details}>
                 <img
                     src={avatar}
                     alt="User avatar"
-                    className="Profile__avatar"
+                    className={styles.Profile__avatar}
                 />
-                <p className="Profile__username">{username}</p>
-                <p className="Profile__tag">@{tag}</p>
-                <p className="Profile__location">{location}</p>
+                <p className={styles.Profile__username}>{username}</p>
+                <p className={styles.Profile__tag}>@{tag}</p>
+                <p className={styles.Profile__location}>{location}</p>
             </div>
 
-            <ul className="Profile__stats">
-                <li className="Profile__stats-item">
-                    <span className="Profile__stats-label">Followers</span>
-                    <span className="Profile__stats-value">{stats.followers}</span>
+            <ul className={styles.Profile__stats}>
+                <li className={styles['Profile__stats-item']}>
+                    <span className={styles['Profile__stats-label']}>Followers</span>
+                    <span className={styles['Profile__stats-value']}>{stats.followers}</span>
                 </li>
-                <li className="Profile__stats-item">
-                    <span className="Profile__stats-label">Views</span>
-                    <span className="Profile__stats-value">{stats.views}</span>
+                <li className={styles['Profile__stats-item']}>
+                    <span className={styles['Profile__stats-label']}>Views</span>
+                    <span className={styles['Profile__stats-value']}>{stats.views}</span>
                 </li>
-                <li className="Profile__stats-item">
-                    <span className="Profile__stats-label">Likes</span>
-                    <span className="Profile__stats-value">{stats.likes}</span>
+                <li className={styles['Profile__stats-item']}>
+                    <span className={styles['Profile__stats-label']}>Likes</span>
+                    <span className={styles['Profile__stats-value']}>{stats.likes}</span>
                 </li>
             </ul>
         </div>
