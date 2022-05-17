@@ -25,9 +25,14 @@ export function Transactions({ items }) {
 
     );
 }
-Transactions.prototype = {
-    items: PropTypes.arrayOf(PropTypes.object)
-}
 Transactions.defaultProps = {
     items: []
+}
+Transactions.prototype = {
+    items: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string,
+        type: PropTypes.string,
+        amount: PropTypes.string,
+        currency: PropTypes.string
+    }))
 }

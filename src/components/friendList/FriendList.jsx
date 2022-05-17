@@ -16,9 +16,14 @@ export function Friends({ friends }) {
 
     );
 }
-Friends.prototype = {
-    friends: PropTypes.arrayOf(PropTypes.object)
-}
 Friends.defaultProps = {
     friends: []
+}
+Friends.prototype = {
+    friends: PropTypes.arrayOf(PropTypes.shape({
+        avatar: PropTypes.string,
+        name: PropTypes.string,
+        isOnline: PropTypes.bool,
+        id: PropTypes.number
+    }))
 }
