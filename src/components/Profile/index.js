@@ -1,1 +1,1 @@
-export { default } from "./Profile.jsx";
+export { default } from "./Profile";
